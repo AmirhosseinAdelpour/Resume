@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امیرحسین عادلپور</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --dark: #1e293b;
+            --light: #f1f5f9;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 0;
+        }
+        
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+            position: relative;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .contact-info a:hover {
+            transform: translateY(-3px);
+        }
+        
+        .section {
+            padding: 40px 50px;
+        }
+        
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: default;
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 30px;
+            padding-left: 25px;
+            border-left: 3px solid var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .experience-item:hover, .education-item:hover {
+            border-left-color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .date {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            height: 8px;
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .header-section, .section {
+                padding: 30px;
+            }
+            .name {
+                font-size: 2rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="header-section text-center">
+            <h1 class="name">امیرحسین عادلپور</h1>
+            <p class="title">مهندس نرم افزار | توسعه دهنده پایتون</p>
+            <div class="contact-info justify-content-center">
+                <a href="mailto:alex.chen@email.com">adelpouramirhossein@gmail.com <i class="fas fa-envelope"></i></a>
+                <a href="tel:+989926323875">09926323875 <i class="fas fa-phone"></i></a>
+                <a href="https://github.com/AmirhosseinAdelpour" target="_blank">https://github.com/AmirhosseinAdelpour <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section">
+            <h2 class="section-title">درباره من</h2>
+            <p>
+                من هدفم اینه مهندس باشم، مثل یک مهندس فکر کنم و اولویت برام نوآوری و ایده پردازی باشه. <br>
+                برام مهمه موثر باشم و بتونم مشکلات رو حل کنم نه اینکه مثل یک ربات محدود به دنیایی خاص باشم. <br>
+                ارتباطات اجتماعیم خوبه، میتونم ارتباط موثر بگیرم و تاثیرگزار باشم. <br>
+                نهایتا، من هنوز یک دانشجو در حال یادگیری هستم که در هیچ زمینه ای 'عالی' نیستم، اما برای تعالی همیشه تلاش میکنم.
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="section bg-light">
+            <h2 class="section-title">مهارت های تکنیکال</h2>
+            <div>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Docker - Docker compose</span>
+                <span class="skill-tag">Nginx</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">Celery</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Web scraping (Selenium, bs4)</span>
+                <span class="skill-tag">Data processing</span>
+                <span class="skill-tag">Mysql</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">HTML - CSS - JavaScript</span>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2 class="section-title">تجارب کاری</h2>
+            
+            <div class="experience-item">
+                <div class="job-title">مهندس نرم افزار</div>
+                <div class="company">تینا تریپ!</div>
+                <div class="date"><i class="far fa-calendar"></i> سال 1401 - اکنون</div>
+                <ul>
+                    <li>طراحی وب سایت رزواسیون آنلاین تور و هتل </li>
+                    <li>استقرار پروژه روی سرور - مدیریت وب سرور - درخواست ها - wsgi server</li>
+                    <li>جمع آوری دیتا - تحلیل و استفاده برای پیشنهادات تور و هتل</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-title">تحلیلگر داده</div>
+                <div class="company">سازمان بهزیستی</div>
+                <div class="date"><i class="far fa-calendar"></i> سال 1400 - 1401</div>
+                <ul>
+                    <li>جمع آوری اطلاعات خانوار</li>
+                    <li>پاک سازی و مدل سازی از روی دیتا ها</li>
+                    <li>طراحی مدل برای پیشبینی طلاق با دقت 80 درصد</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section bg-light">
+            <h2 class="section-title">تحصیلات</h2>
+            
+            <div class="education-item">
+                <div class="job-title">کارشناسی مهندسی کامپیوتر (درحال تحصیل)</div>
+                <div class="company">دانشگاه خیام</div>
+                <div class="date"><i class="far fa-calendar"></i> بهمن 1400 - اکنون</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animate skill tags on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 50);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.style.opacity = '0';
+            tag.style.transform = 'translateY(20px)';
+            tag.style.transition = 'all 0.5s ease';
+            observer.observe(tag);
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add hover effect sound (optional - just visual feedback)
+        document.querySelectorAll('.experience-item, .education-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'rgba(99, 102, 241, 0.05)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'transparent';
+            });
+        });
+    </script>
+</body>
+</html>
